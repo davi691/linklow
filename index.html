@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinkLow | Encurtador de Links</title>
+
+    <meta name="description" content="Encurte seus links de forma rápida e segura.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fundo -->
+    <div class="background"></div>
+
+    <!-- Navbar -->
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-link"></i>
+            <h1>LinkLow</h1>
+        </div>
+
+        <button id="themeButton">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+
+        <section class="hero">
+
+            <h2>
+                Encurte seus links
+                <span>em segundos.</span>
+            </h2>
+
+            <p>
+                Cole qualquer URL abaixo e gere um link curto
+                pronto para compartilhar.
+            </p>
+
+        </section>
+
+        <!-- Card -->
+        <section class="card">
+
+            <div class="input-group">
+
+                <input
+                    id="urlInput"
+                    type="url"
+                    placeholder="https://exemplo.com/seu-link"
+                >
+
+                <button id="shortButton">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Encurtar
+
+                </button>
+
+            </div>
+
+            <!-- Resultado -->
+            <div class="result hidden" id="result">
+
+                <h3>Seu link:</h3>
+
+                <div class="result-box">
+
+                    <input
+                        id="shortUrl"
+                        readonly
+                    >
+
+                    <button id="copyButton">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+
+                </div>
+
+                <div class="actions">
+
+                    <button id="qrButton">
+                        <i class="fa-solid fa-qrcode"></i>
+                        QR Code
+                    </button>
+
+                    <button id="openButton">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Abrir
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Estatísticas -->
+        <section class="stats">
+
+            <div class="box">
+
+                <i class="fa-solid fa-link"></i>
+
+                <h2 id="totalLinks">0</h2>
+
+                <p>Links criados</p>
+
+            </div>
+
+        </section>
+
+        <!-- Histórico -->
+        <section class="history">
+
+            <div class="history-title">
+
+                <h2>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico
+                </h2>
+
+                <button id="clearHistory">
+                    Limpar
+                </button>
+
+            </div>
+
+            <div
+                id="historyList"
+                class="history-list">
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 LinkLow</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
